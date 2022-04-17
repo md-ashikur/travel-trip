@@ -1,0 +1,42 @@
+.head-title{
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    font-size: 40px;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+.head-title h1{
+    font-size: 90px;
+}
+.head-title p{
+    font-size: 20px;
+}
+.head-title button{
+    outline: none;
+    border: 3px solid white;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: 30px;
+    padding: 5px 30px ;
+    font-weight: 700;
+    color: white;
+}
+.head-title button:hover{
+    background-color: rgba(228, 228, 224, 0.247);
+    color: orangered;
+    border: 3px solid orangered;
+}
+.banner {
+    width: 100vh;
+    height: 100vh;
+}
+/* .carousel-control-prev-icon{
+    position: relative;
+    top: -120px;
+}
+.carousel-control-next-icon{
+    position: relative;
+    top: -120px;
+} */
