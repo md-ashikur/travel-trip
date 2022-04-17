@@ -1,14 +1,15 @@
 .head-title{
     position: absolute;
     top: 200px;
-    left: 400px;
+    left: 200px;
     font-size: 40px;
     z-index: 1;
     text-align: center;
     color: white;
 }
 .head-title h1{
-    font-size: 90px;
+    font-size: 80px;
+    
 }
 .head-title p{
     font-size: 20px;
@@ -25,8 +26,8 @@
 }
 .head-title button:hover{
     background-color: rgba(228, 228, 224, 0.247);
-    color: orangered;
-    border: 3px solid orangered;
+    color: orange;
+    border: 3px solid orange;
 }
 .banner {
     width: 100vh;

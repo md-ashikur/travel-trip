@@ -1,0 +1,14 @@
+.logo{
+    font-weight: 700;
+    color: orange !important;
+    font-size: 30px !important;
+}
+.nav-text{
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(43, 41, 41);
+    font-weight: 500;
+}
+.nav-text:hover{
+    color: orange;
+}
