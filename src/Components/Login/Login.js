@@ -44,11 +44,11 @@ const Login = () => {
     if (user || user1) {
         navigate(from, { replace: true });
     }
-    
 
-    const handleSubmit = event =>{
+
+    const handleSubmit = event => {
         event.preventDefault();
-     }
+    }
     return (
 
         <div>
@@ -59,18 +59,10 @@ const Login = () => {
                 <div className='form-container'>
                     <Form onSubmit={handleSubmit}>
                         <h2 className='text-center pb-3'>Login</h2>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" onBlur={(e) => setEmail(e.target.value)} placeholder="Enter email" required />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
-                        </Form.Group>
+                        <input onBlur={(e) => setEmail(e.target.value)} type="email" name="email" id="" className='input-design' placeholder='Email Address' required /><br></br>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" onBlur={(e) => setPassword(e.target.value)} placeholder="Password" required />
-                        </Form.Group>
+                        <input onBlur={(e) => setPassword(e.target.value)} type="password" name="password" className='input-design' id="" placeholder='Password' required /><br></br>
+
                         <p style={{ color: 'red' }}>{errorElement}</p>
                         <p>{loading}</p>
                         <div className='text-center'>

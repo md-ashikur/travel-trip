@@ -33,11 +33,30 @@
     width: 100vh;
     height: 100vh;
 }
-/* .carousel-control-prev-icon{
-    position: relative;
-    top: -120px;
+@media only screen and (max-width: 400px){
+    .head-title{
+         top: 100px;
+        left: 15px;
+        font-size: 2px;
+           
+    }
+    .head-title h1{
+        font-size: 30px;
+           
+    }
+    .head-title p{
+        font-size: 15px;
+    }
+    .banner img{
+        
+        height: 50vh;
+    }
+    .carousel-control-prev-icon{
+        position: relative;
+        top: -220px;
+    }
+    .carousel-control-next-icon{
+        position: relative;
+        top: -220px;
+    }
 }
-.carousel-control-next-icon{
-    position: relative;
-    top: -120px;
-} */

@@ -2,7 +2,7 @@ import React from 'react';
 import { CardGroup, Carousel } from 'react-bootstrap';
 import Services from '../Services/Services';
 import Cart from '../Cart/Cart';
-import './Home.css'
+import './Home.css';
 import useCart from '../Hooks/useCart';
 const Home = () => {
 
