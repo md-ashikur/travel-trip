@@ -1,10 +1,13 @@
-# Getting Started with Create React App
+# Travel Trip
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+## About website
+* It's a travel guide website.
+* It has service,blog, about, login, sign up pages .
+* this website made with react js, react firebase hook, react-bootstrap,css, html, react font awesome.
+* functionality : email verification, login with google, forget password, react route, etc. 
+* hosted in firebase.
 
 ### `npm start`
 
