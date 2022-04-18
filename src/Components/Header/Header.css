@@ -12,3 +12,16 @@
 .nav-text:hover{
     color: orange;
 }
+.signout{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 15px;
+    font-weight: 700;
+    color: rgb(97, 96, 96);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.signout:hover{
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    color: orange;
+}

@@ -1,8 +1,14 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import Services from '../Services/Services';
+import Cart from '../Cart/Cart';
 import './Home.css'
+import useCart from '../Hooks/useCart';
 const Home = () => {
+
+    const [cart, setCart] = useCart();
+    const carts = cart.slice(0, 3);
+
     return (
         <div>
             <div className="head-title">
@@ -40,7 +46,10 @@ const Home = () => {
 
                 </Carousel.Item>
             </Carousel>
-            <Services></Services>
+            <Services>{
+                carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
+            }</Services>
+            
         </div>
     );
 };
