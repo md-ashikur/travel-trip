@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { CardGroup, Carousel } from 'react-bootstrap';
 import Services from '../Services/Services';
 import Cart from '../Cart/Cart';
 import './Home.css'
@@ -49,6 +49,7 @@ const Home = () => {
             <Services>{
                 carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
             }</Services>
+           
             
         </div>
     );
