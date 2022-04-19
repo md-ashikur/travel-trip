@@ -46,7 +46,8 @@ const Home = (cart) => {
 
                 </Carousel.Item>
             </Carousel>
-            <h1 className='text-center mt-5'>Services</h1>
+           <div>
+           <h1 className='text-center mt-5'>Services</h1>
             <Services>{
                 // carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
             }</Services>
@@ -72,6 +73,7 @@ const Home = (cart) => {
                 </div>
 
             </section>
+           </div>
 
 
         </div>
