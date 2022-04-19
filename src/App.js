@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Home></Home>} />
         <Route path="/home" element={<Home></Home>} />
         <Route path="/services" element={
-         <Services></Services>
+         <RequireAuth><Services></Services></RequireAuth>
           
         
         }></Route>
@@ -33,7 +33,7 @@ function App() {
         <Route path="*" element={
           <RequireAuth><CheckOut></CheckOut></RequireAuth>
         } />
-        <Route path="/checkout" element={<CheckOut></CheckOut>} />
+        <Route path="/checkout" element={<RequireAuth><CheckOut></CheckOut></RequireAuth>} />
       </Routes>
       <Footer></Footer>
     </div>
