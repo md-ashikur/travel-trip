@@ -49,8 +49,29 @@ const Home = () => {
             <Services>{
                 carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
             }</Services>
-           
-            
+            <section class="container" id="Contact">
+                <p>Feel free to contact me any time</p>
+                <h1 class="my-title">Get in touch</h1>
+                <div class="row my-5">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <h5>Call Us On</h5>
+                        <p style={{ color: "#888D95FF;" }}>+123 456 7890</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <h5>Visit Office</h5>
+                        <p style={{ color: "#888D95FF;" }}>24 Street, Bogura, Bangladesh.</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <h5>Email Us At</h5>
+                        <p style={{ color: "#888D95FF;" }}>sample@uone.com</p>
+                    </div>
+                </div>
+
+            </section>
+
+
         </div>
     );
 };

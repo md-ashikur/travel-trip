@@ -2,14 +2,31 @@
     width: 30%;
     padding: 40px 0;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    position: absolute;
+   position:absolute;
     top: 120px;
    left: 470px;
    border-radius: 10px;
    background-color: rgba(255, 255, 255, 0.904);
    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.form-design{
+    width: 300px;
+    margin: 0 auto;
+}
+.input-group label {
+    display: block;
+    margin-left: 5px;
+}
+
+.input-group input {
+    width: 415px;
+    height: 45px;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 24px;
+    margin: 2px 20px 0px 10px;
+   
 }
 .form-btn{
     padding: 10px 30px ;

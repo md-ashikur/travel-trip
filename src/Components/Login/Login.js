@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import Loading from '../Loading/Loading';
+
 
 const Login = () => {
-
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // google--------------
@@ -26,21 +25,6 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
 
-    const navigate = useNavigate();
-    let errorElement;
-
-
-    if (error || error1) {
-
-        errorElement = <div>
-            <p>Error: {error.message}</p>
-        </div>
-
-    }
-    if (loading || loading1) {
-        return <Loading></Loading>
-    }
-
     if (user || user1) {
         navigate(from, { replace: true });
     }
@@ -48,6 +32,7 @@ const Login = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+        
     }
     return (
 
@@ -57,30 +42,38 @@ const Login = () => {
             </div>
             <div>
                 <div className='form-container'>
-                    <Form onSubmit={handleSubmit}>
-                        <h2 className='text-center pb-3'>Login</h2>
-                        <input onBlur={(e) => setEmail(e.target.value)} type="email" name="email" id="" className='input-design' placeholder='Email Address' required /><br></br>
+                    <h2 className='text-center'>Login</h2>
+                   <form onSubmit={handleSubmit}>
+                    <div className='form-design'>
+                   
+                    <div className="input-group">
+                        <label htmlFor="email">Email</label>
+                        <input className='input-design' onBlur={(e) => setEmail(e.target.value)} type="email" name="email" id="" required />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">Password</label>
+                        <input className='input-design' onBlur={(e) => setPassword(e.target.value)} type="password" name="password" id="" required />
+                    </div>
+                    
+                    <p style={{color: 'red'}}>{error?.message}</p>
+                    
+                    
+                    <div className='text-center'>
+                    <input className=' form-btn' type="submit" value="Login" onClick={() => signInWithEmailAndPassword(email, password)}  required/>
+                    </div>
 
-                        <input onBlur={(e) => setPassword(e.target.value)} type="password" name="password" className='input-design' id="" placeholder='Password' required /><br></br>
 
-                        <p style={{ color: 'red' }}>{errorElement}</p>
-                        <p>{loading}</p>
-                        <div className='text-center'>
-                            <button
-                                onClick={() => signInWithEmailAndPassword(email, password)}
-                                className='form-btn' type="submit">
-                                Login
-                            </button>
+                    <div className='text-center'>
 
-                            <p className='mt-3'>Don't have any account? <Link to="/signup" className='nav-links'>Sign Up</Link></p>
-                            <hr></hr>
-                            <button onClick={() => signInWithGoogle()}
-                                className='form-btn' type="submit">
-                                Google
-                            </button>
-                        </div>
-
-                    </Form>
+                        <p className='mt-3'>Already have an account? <Link to="/signup" className='nav-links'>Sign Up</Link></p>
+                        <hr></hr>
+                        <button onClick={() => signInWithGoogle()}
+                            className='form-btn' type="submit">
+                            Google
+                        </button>
+                    </div>
+                    </div>
+                </form>
                 </div>
             </div>
 
