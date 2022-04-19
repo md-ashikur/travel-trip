@@ -1,13 +1,13 @@
 import React from 'react';
-import { CardGroup, Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import Services from '../Services/Services';
-import Cart from '../Cart/Cart';
-import './Home.css';
-import useCart from '../Hooks/useCart';
-const Home = () => {
 
-    const [cart, setCart] = useCart();
-    const carts = cart.slice(0, 3);
+import './Home.css';
+
+const Home = (cart) => {
+
+    
+    const {name, img, price} = cart;
 
     return (
         <div>
@@ -46,26 +46,28 @@ const Home = () => {
 
                 </Carousel.Item>
             </Carousel>
+            <h1 className='text-center mt-5'>Services</h1>
             <Services>{
-                carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
+                // carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
             }</Services>
-            <section class="container" id="Contact">
+            <section className="container">
                 <p>Feel free to contact me any time</p>
-                <h1 class="my-title">Get in touch</h1>
-                <div class="row my-5">
-                    <div class="col-lg-4 col-md-4 col-12">
+                <h1 >Get in touch</h1>
+                <div className="row my-5">
+                    <div className="col-lg-4 col-md-4 col-12">
                         <h5>Call Us On</h5>
                         <p style={{ color: "#888D95FF;" }}>+123 456 7890</p>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-12">
+                    <div className="col-lg-4 col-md-4 col-12">
                         <h5>Visit Office</h5>
                         <p style={{ color: "#888D95FF;" }}>24 Street, Bogura, Bangladesh.</p>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-12">
+                    <div className="col-lg-4 col-md-4 col-12">
                         <h5>Email Us At</h5>
                         <p style={{ color: "#888D95FF;" }}>sample@uone.com</p>
+                        
                     </div>
                 </div>
 

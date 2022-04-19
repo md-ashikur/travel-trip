@@ -2,8 +2,8 @@ import React from 'react';
 
 const CheckOut = () => {
     return (
-        <div>
-            <h2>checkout</h2>
+        <div className='my-5 pt-5 text-center'>
+            <h2 className='my-5'>checkout</h2>
         </div>
     );
 };

@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
 
-const useCart = () => {
+const useService = () => {
     const [cart, setCart] = useState([]);
-    useEffect(() =>{
+
+    useEffect( () =>{
         fetch('data.json')
         .then(res => res.json())
         .then(data => setCart(data));
     }, []);
 
+
     return [cart, setCart];
+    
 };
 
-export default useCart;
+export default useService;
